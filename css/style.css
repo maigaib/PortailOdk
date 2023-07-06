@@ -1,0 +1,413 @@
+.contenaire{
+    width: 1440px; 
+    height: 990px; 
+    position: relative; 
+    background: rgba(242.25, 119.43, 6.06, 0.95);
+}
+
+.header{
+    width: 100%; 
+    height: 75px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: white; 
+    border-bottom: 2px solid black;
+}
+.logo{
+    width: 298px; 
+    height: 70px;
+}
+.search{
+    width: 48px; 
+    height: 47px; 
+    left: 1295px; 
+    top: 10px; 
+    position: absolute;
+}
+.user{
+    width: 48px; 
+    height: 47px; 
+    left: 1350px; 
+    top: 10px; 
+    position: absolute;
+}
+.power{
+    width: 48px; 
+    height: 47px; 
+    left: 1405px; 
+    top: 10px; 
+    position: absolute;
+}
+.message{
+    width: 500px; 
+    height: 180px; 
+    color: white; 
+    top: 40px;left: 30px; 
+    font-size: 48px; 
+    font-family: Inter; 
+    font-weight: 800; 
+    position: absolute; 
+    word-wrap: break-word;
+}
+.divPhoto{
+    width: 500px; 
+    height: 180px; 
+    top: 150px; 
+    position: absolute;
+}
+.photo{
+    height: 580px;
+}
+.formulaire{
+    width: 500px; 
+    height: 601px; 
+    background: white; 
+    border-radius: 20px; 
+    left: 700px; 
+    top: 150px; 
+    position: absolute;
+}
+.formTitle{
+    top: 30px; 
+    text-align: center; 
+    color: #F25B06; 
+    font-size: 40px; 
+    font-family: Inter; 
+    font-weight: 800; 
+    position: relative;
+}
+.formDiv{
+    display: inline-grid; 
+    /*flex-direction: column; */
+    justify-content: center; 
+    top: 70px; 
+    position: relative; 
+    align-items: center;
+    margin-left: 25px;
+}
+label{
+    font-size: 30px; 
+    font-family: Inter; 
+    font-weight: 800; 
+}
+/*input{
+    width: 440px; 
+    height: 54px; 
+    background: white;
+    border-radius: 15px;
+}*/
+.divBtn{
+    margin-top: 180px; 
+    margin-left: 25%;
+}
+.btn{
+    width: 264px; 
+    height: 61px; 
+    background: rgba(242.25, 119.43, 6.06, 0.95); 
+    border-radius: 15px; 
+    align-items: center; 
+    color: white; 
+    font-size: 30px; 
+    font-family: Inter; 
+    font-weight: 800;
+}
+.footerDiv{
+    width: 600px;  
+    left: 30px; 
+    color: black; 
+    font-size: 44px; 
+    font-family: Inter; 
+    /*font-weight: 800; */
+    line-height: 35px; 
+    position: absolute; 
+    top: 73%;
+}
+.linkled{
+    width: 58px; 
+    height: 55px; 
+    left: 760px; 
+    top: 85%; 
+    position: absolute; 
+    border-radius: 50px; 
+    border: 0.50px black solid;    
+}
+.instagram{
+    width: 55px; 
+    height: 56px; 
+    left: 840px; 
+    top: 85%; 
+    position: absolute; 
+    border-radius: 50px; 
+    border: 0.50px black solid; 
+}
+.twitter{
+    width: 56px; 
+    height: 54px; 
+    left: 920px; 
+    top: 85%; 
+    position: absolute; 
+    border-radius: 50px; 
+    border: 0.50px black solid; 
+}
+.facebook{
+    width: 55px; 
+    height: 55px; 
+    left: 1000px; 
+    top: 85%; 
+    position: absolute; 
+    border-radius: 50px; 
+    border: 0.50px black solid; 
+
+}
+.divAccueil{
+    width: 953px; 
+    height: 500px; 
+    background: white; 
+    border-radius: 20px; 
+    top:200px;position: absolute; 
+    left: 15%;
+}
+
+.accueilTitle{
+    width: 776px; 
+    height: 64px; 
+    text-align: center; 
+    color: #F25B06; 
+    font-size: 40px; 
+    font-family: Inter; 
+    font-weight: 800;
+    top:30px;
+    position: absolute; 
+    left: 10%;
+}
+
+table{
+    margin-top: 100px;
+}
+
+th{
+    width: 154px; 
+    height: 50px; 
+    color: black; 
+    font-size: 32px; 
+    font-family: Inter; 
+    font-weight: 800; 
+}
+
+button{
+    width: 198px; 
+    height: 48px; 
+    background: rgba(242.25, 119.43, 6.06, 0.95); 
+    border-radius: 15px;
+    color: white;
+    font-size: 22px; 
+    font-family: Inter; 
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.bdetail{
+    width: 30px; 
+    height: 30px; 
+    background:white;
+    text-align: center;
+}
+
+.dNom {
+    color: #f25b06;
+    text-align: center;
+    font: 800 38px "Inter", sans-serif;
+    position: absolute;
+    left: 200px;
+    top: 80px;
+    width: 792px;
+  }
+  .dEmail {
+    color: #000000;
+    text-align: left;
+    font: 800 22px "Inter", sans-serif;
+    position: absolute;
+    left: 463px;
+    top: 293px;
+    width: 570px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .dDate {
+    color: #000000;
+    text-align: left;
+    font: 800 22px "Inter", sans-serif;
+    position: absolute;
+    left: 463px;
+    top: 185px;
+    width: 558px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .dPromotion {
+    color: #000000;
+    text-align: left;
+    font: 800 22px "Inter", sans-serif;
+    position: absolute;
+    left: 463px;
+    top: 135px;
+    width: 453px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .dTelephone {
+    color: #000000;
+    text-align: left;
+    font: 800 22px "Inter", sans-serif;
+    position: absolute;
+    left: 463px;
+    top: 240px;
+    width: 553px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .dAnnee {
+    color: #000000;
+    text-align: left;
+    font: 800 22px "Inter", sans-serif;
+    position: absolute;
+    left: 463px;
+    top: 351px;
+    width: 546px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .detailDiv {
+    border-radius: 20px;
+    width: 400px;
+    height: 360;
+    position: absolute;
+    left: 30;
+    top: 68px;
+    /*background: #000000;*/
+  }
+
+  .return{
+    width: 48px; 
+    height: 47px; 
+    left: 15px; 
+    top: 10px; 
+    position: absolute;
+}
+
+.delete{
+    width: 31px; 
+    height: 30px; 
+    left: 810px; 
+    top: 40px; 
+    position: absolute;
+}
+.edit{
+    width: 31px; 
+    height: 30px; 
+    left: 860px; 
+    top: 40px; 
+    position: absolute;
+}
+
+.formulaireAdd{
+    width: 700px; 
+    height: 675px; 
+    background: white; 
+    border-radius: 20px; 
+    left: 700px; 
+    top: 150px; 
+    position: absolute;
+}
+
+.labelA{
+    font-size: 18px; 
+    font-family: Inter; 
+    /*font-weight: 800;*/ 
+}
+.inputA{
+    width: 280px; 
+    height: 34px; 
+    background: white; 
+    border-radius: 8px;
+}
+
+.formAdiv {
+    display: inline-grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    top: 40px;
+    position: relative;
+    align-items: center;
+    margin-left: 120px;
+}
+.divBtnb {
+    margin-top: 60px;
+    margin-left: 25%;
+}
+
+.inputPhoto{
+    width: 280px; 
+    height: 44px;  
+    border-radius: 15px;
+}
+
+.formAdd{
+    display: inline-grid; 
+    /*flex-direction: column; */
+    justify-content: center; 
+    top: 70px; 
+    position: relative; 
+    align-items: center;
+    margin-left: 45px;
+}
+.formPhoto{
+    display: inline-grid; 
+    /*flex-direction: column; */
+    justify-content: center; 
+    top: 70px; 
+    position: relative; 
+    align-items: center;
+    margin-left: 45px;
+    margin-top: 25px;
+}
+tbody{
+    text-align: center;
+}
+
+.divBtnA{
+    margin-top: 70px; 
+    margin-left: 35%;
+}
+.btnA{
+    width: 200px; 
+    height: 41px; 
+    background: rgba(242.25, 119.43, 6.06, 0.95); 
+    border-radius: 15px; 
+    align-items: center; 
+    color: white; 
+    font-size: 30px; 
+    font-family: Inter; 
+    font-weight: 800;
+}
+
+#id_alerte{
+    width: fit-content;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
