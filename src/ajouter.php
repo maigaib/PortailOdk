@@ -41,21 +41,14 @@ echo'<div class="formulaireAdd">';
                             echo " </option>";
                         }
                         echo "</select>";
-                          
-                echo'<label class="labelA" for="date_sortie">Admin</label>';
-                echo'<select class="inputA" name="id_adm" >';
-                        foreach ($l_admin as $l){
-                            echo "<option value=".$l['id_adm'].">";
-                            echo $l['nom_adm'].' '.$l['prenom_adm'] ;
-                            echo " </option>";
-                        }
-                        echo "</select>";
+                   // echo'<label class="labelA" for="date_sortie">Matricule</label>';
+                    //echo"<input class=inputA type=text  name=matricule value=".$matricule." required>";
                 echo'</div>';
             echo'<div class="formPhoto">';
-                echo'<input class="inputPhoto" type="file"  name="photo">';
+                echo'<input class="inputP" type="file"  name="photo">';
             echo'</div>';
-            echo'<div class="divBtnA">';
-                echo'<input class="btnA" type="submit" name="ajouter" value="Ajouter">';
+            echo'<div class="divBtnAa">';
+                echo'<input class="btnA" type="button" onclick="OnSubmit()" name="ajouter" value="Ajouter">';
             echo'</div>';
     echo'</form>';
                         echo'<span id="id_alerte"></span>';

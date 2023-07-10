@@ -69,12 +69,12 @@
     position: absolute;
 }
 .formTitle{
-    top: 30px; 
+    top: 20px; 
     text-align: center; 
     color: #F25B06; 
-    font-size: 40px; 
+    font-size: 32px; 
     font-family: Inter; 
-    font-weight: 800; 
+    font-weight: 500; 
     position: relative;
 }
 .formDiv{
@@ -170,41 +170,44 @@ label{
 }
 
 .accueilTitle{
-    width: 776px; 
-    height: 64px; 
-    text-align: center; 
-    color: #F25B06; 
-    font-size: 40px; 
-    font-family: Inter; 
+    width: 690px;
+    height: 54px;
+    text-align: center;
+    color: #F25B06;
+    font-size: 35px;
+    font-family: Inter;
     font-weight: 800;
-    top:30px;
-    position: absolute; 
+    top: 50px;
+    position: absolute;
     left: 10%;
 }
 
 table{
-    margin-top: 100px;
-}
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;}
 
 th{
     width: 154px; 
     height: 50px; 
     color: black; 
-    font-size: 32px; 
+    font-size: 26px; 
     font-family: Inter; 
-    font-weight: 800; 
+    font-weight: 600; 
 }
-
+thead{
+    background: rgba(242.25, 119.43, 6.06, 0.95);
+}
 button{
-    width: 198px; 
-    height: 48px; 
-    background: rgba(242.25, 119.43, 6.06, 0.95); 
+    width: 148px;
+    height: 45px;
+    background: rgba(242.25, 119.43, 6.06, 0.95);
     border-radius: 15px;
     color: white;
-    font-size: 22px; 
-    font-family: Inter; 
+    font-size: 22px;
+    font-family: Inter;
     font-weight: 800;
-    margin-left: 10px;
+    margin-left: 84%;
 }
 
 .bdetail{
@@ -308,23 +311,21 @@ button{
 }
 
 .delete{
-    width: 31px; 
-    height: 30px; 
-    left: 810px; 
-    top: 40px; 
+    width: 31px;
+    height: 30px;
+    left: 771px;
     position: absolute;
 }
 .edit{
-    width: 31px; 
-    height: 30px; 
-    left: 860px; 
-    top: 40px; 
+    width: 31px;
+    height: 30px;
+    left: 823px;
     position: absolute;
 }
 
 .formulaireAdd{
-    width: 700px; 
-    height: 675px; 
+    width: 653px;
+    height: 545px;
     background: white; 
     border-radius: 20px; 
     left: 700px; 
@@ -335,7 +336,7 @@ button{
 .labelA{
     font-size: 18px; 
     font-family: Inter; 
-    /*font-weight: 800;*/ 
+    font-weight: 800;
 }
 .inputA{
     width: 280px; 
@@ -371,7 +372,7 @@ button{
     top: 70px; 
     position: relative; 
     align-items: center;
-    margin-left: 45px;
+    margin-left: 5%;
 }
 .formPhoto{
     display: inline-grid; 
@@ -383,24 +384,30 @@ button{
     margin-left: 45px;
     margin-top: 25px;
 }
-tbody{
-    text-align: center;
+
+tr{
+    font-size: 25px;
+    text-align: left;
 }
 
 .divBtnA{
     margin-top: 70px; 
-    margin-left: 35%;
+    margin-left: 40%;
+}
+.divBtnAm{
+    margin-top: 6%; 
+    margin-left: 40%;
 }
 .btnA{
-    width: 200px; 
+    width: 150px; 
     height: 41px; 
     background: rgba(242.25, 119.43, 6.06, 0.95); 
     border-radius: 15px; 
     align-items: center; 
     color: white; 
-    font-size: 30px; 
+    font-size: 20px; 
     font-family: Inter; 
-    font-weight: 800;
+    font-weight: 500;
 }
 
 #id_alerte{
@@ -410,4 +417,67 @@ tbody{
     margin-left: auto;
     margin-right: auto;
     color: red;
+    font-size: 20px;
+}
+
+.formLog {
+    display: inline-grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    top: 70px;
+    position: relative;
+    align-items: center;
+    margin-left: 105px;
+}
+
+
+.formulaireMod {
+    width: 655px;
+    height: 634px;
+    background: white;
+    border-radius: 20px;
+    left: 658px;
+    top: 150px;
+    position: absolute;
+}
+
+.formMod {
+    display: inline-grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-left: 34px;
+}
+
+.formTitleM {
+    top: 21px;
+    text-align: center;
+    color: #F25B06;
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 500;
+    position: relative;
+}
+
+.divPhotoM{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.photoMod{
+    width: 20%;
+    border-radius: 50%;
+}
+.inputP {
+    width: 280px;
+    height: 33px;
+    background: white;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.divBtnAa {
+    margin-top: 91px;
+    margin-left: 40%;
 }

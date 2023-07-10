@@ -1,6 +1,7 @@
 <?php 
 
-//session_start();
+session_start();
+$id_adm = htmlspecialchars($_SESSION['id_adm']);
 $bdd = new PDO('mysql: host=localhost; dbname=db_odk;', 'root');
 $admin = $bdd -> query('SELECT * FROM administrateurs');
 $l_admin = array();
@@ -14,10 +15,7 @@ if(isset($_REQUEST['emp'])){
 
 switch($emp){
 
-    case "A" :
-        //if(isset($_POST['ajouter'])){
-            //if(!empty($_POST['email']) AND !empty($_POST['mot_passe'])){
-                
+    case "A" :             
                
                
         $nom = htmlspecialchars($_POST['nom']);
@@ -27,18 +25,22 @@ switch($emp){
         $date_naiss = htmlspecialchars($_POST['date_naiss']);
         $telephone = htmlspecialchars($_POST['telephone']);
         $id_pro = htmlspecialchars($_POST['id_pro']);
-        $id_adm = htmlspecialchars($_POST['id_adm']);
+
+        $mat = $bdd -> prepare("SELECT nom_pro FROM promotions WHERE id_pro= $id_pro");
+        $m = $mat -> fetch();
+        $matricule = $m.genererMatricule();
         $photo = htmlspecialchars($_FILES['photo']['name']);
         move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$photo);
 
-        $apprenantAdd = $bdd -> prepare('INSERT INTO apprenants(nom, prenom, email, age, date_naiss, telephone, id_pro,id_adm, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ');
-        $apprenantAdd -> execute(array($nom, $prenom, $email, $age, $date_naiss, $telephone, $id_pro, $id_adm, $photo));
+        $apprenantAdd = $bdd -> prepare('INSERT INTO apprenants(nom, prenom, email, age, matricule, date_naiss, telephone, id_pro,id_adm, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ');
+        $apprenantAdd -> execute(array($nom, $prenom, $email, $age, $matricule, $date_naiss, $telephone, $id_pro, $id_adm, $photo));
         
         header('location: accueil.php');  
     //}
         break;
     case "M" :
         $id_app = $_REQUEST['id_app']; 
+
         $nom = htmlspecialchars($_POST['nom']);
         $prenom = htmlspecialchars($_POST['prenom']);
         $email = htmlspecialchars($_POST['email']);
@@ -46,14 +48,15 @@ switch($emp){
         $date_naiss = htmlspecialchars($_POST['date_naiss']);
         $telephone = htmlspecialchars($_POST['telephone']);
         $id_pro = htmlspecialchars($_POST['id_pro']);
-        $id_adm = htmlspecialchars($_POST['id_adm']);
-        $photo = htmlspecialchars($_FILES['photo']['name']);
-        move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$photo);
-        $delApp = $bdd -> query("UPDATE apprenants SET (nom = $nom, prenom =$prenom, email = $email, age = $age, date_naiss = $date_naiss, telephone = $telephone, id_pro = $id_pro, id_adm = $id_adm, photo = $photo) WHERE id_app= $id_app");
+        $matricule = htmlspecialchars($_POST['matricule']);
+        $photo = htmlspecialchars($_POST['photo']);
+        $delApp = $bdd->prepare("UPDATE apprenants SET nom = ?, prenom = ?, email = ?, age = ?, matricule = ?, date_naiss = ?, telephone = ?, id_pro = ?, id_adm = ?, photo = ? WHERE id_app = ?");
+        $delApp->execute([$nom, $prenom, $email, $age, $matricule, $date_naiss, $telephone, $id_pro, $id_adm, $photo, $id_app]);
+        header('location: accueil.php');         
         break;
     case "S" :
         $id_app = $_REQUEST['id_app'];
-        $delApp = $bdd -> query("DELETE FROM apprenants WHERE id_app= $id_app");
+        $delApp = $bdd -> prepare("DELETE FROM apprenants WHERE id_app= $id_app");
         $mod = $delApp -> execute ();
          
          header('location: accueil.php');
@@ -85,6 +88,17 @@ if(isset($_REQUEST['id_app'])){
 }
 
 
-   
+function genererMatricule()
+{
+    $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    $matricule = '';
+
+    for ($i = 0; $i < 4; $i++) {
+        $index = rand(0, strlen($caracteres) - 1);
+        $matricule .= $caracteres[$index];
+    }
+
+    return $matricule;
+}
     
 ?>
